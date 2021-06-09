@@ -6,7 +6,9 @@ services:
      container_name: php-nginx
      volumes:
       - ./api:/api
-      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/cert/1_tencent.tyrantqiao.com_bundle.crt:/etc/nginx/1_tencent.tyrantqiao.com_bundle.crt
+      - ./nginx/cert/2_tencent.tyrantqiao.com.key:/etc/nginx/2_tencent.tyrantqiao.com.key
+      - ./nginx/conf.d:/etc/nginx/conf.d/
       - ./nginx/log:/var/log/nginx
      ports:
       - "9980:80"
