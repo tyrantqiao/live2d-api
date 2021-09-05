@@ -12,8 +12,10 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d/
       - ./nginx/log:/var/log/nginx
      ports:
-      - "9980:80"
-      - "443:443"
+      - "9980:443"
+        # - "443:443"
+     environment:
+       TZ: 'Asia/Shanghai'
      depends_on:
       - php
      networks:
